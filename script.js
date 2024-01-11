@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function (){
+document.addEventListener("DOMContentLoaded", function () {
   // Replace 'YOUR_BACKEND_ENDPOINT' with the actual endpoint to fetch GitHub data.
   const backendEndpoint = 'YOUR_BACKED_ENDPOINT';
   
