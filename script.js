@@ -21,14 +21,14 @@ document.addEventListener("DOMContentLoaded", function (){
      .catch(error => console.error('Error fetching GitHub data:', error));
   
       // Function to draw charts using Chart.js
-  function drawChart(canvasId, title, labels, data)
+  function drawChart(canvasId, title, labels, data){
     const ctx = document.getElementById(canvasId).getContext('2d');
   new Chart(ctx, {
         type: 'bar',
     data:{
        labels: labels,
       datasets: [{
-       label: title,
+        label: title,
         data: data,
         backgroundColor: 'rgba(75, 192, 192, 0.2)',
         borderColor: 'rgba(75, 192, 192, 1)',
@@ -36,11 +36,12 @@ document.addEventListener("DOMContentLoaded", function (){
       }]
     },
     options: {
-    scales: {
-      y: {
-        beginAtZero: true
+      scales: {
+        y: {
+          beginAtZero: true
       }
     }
-    }
-  })
-    )
+  }
+});
+}
+});
