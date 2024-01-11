@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // fetch github data from the backend
    fetch(backendEndpoint)
        .then(response => response.json())
-     .then(data =>{
+       .then(data =>{
        // Process GitHub data
-       const repositories = dat.repositories;
+         const repositories = data.repositories;
 
        // Extract repository names and stars
        const repoName = repositories.map(repo => repo.name);
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
      .catch(error => console.error('Error fetching GitHub data:', error));
   
       // Function to draw charts using Chart.js
-  function drawChart(canvasId, title, labels, data){
+  function drawChart(canvasId, title, labels, data) {
     const ctx = document.getElementById(canvasId).getContext('2d');
   new Chart(ctx, {
         type: 'bar',
@@ -38,10 +38,10 @@ document.addEventListener("DOMContentLoaded", function () {
     options: {
       scales: {
         y: {
-          beginAtZero: true
+            beginAtZero: true
+        }
       }
     }
+  });
   }
-});
-}
 });
